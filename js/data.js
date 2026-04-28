@@ -46,6 +46,24 @@ const products = [
   { id:10, name:"Gate Light 10", code:"GL-010", category:"gate",
     image:"https://i.ibb.co/Kj5ttj3V/Whats-App-Image-2026-04-26-at-11-05-03-PM-1.jpg",
     desc:"Sharp linear design with clear panel — strong, architectural, and unmistakably premium." },
+   
+     { id:11, name:"Gate Light 11", code:"GL-011", category:"gate",
+    image:"https://i.ibb.co/Kj42NHv3/Whats-App-Image-2026-04-28-at-5-43-37-PM.jpg",
+    desc:"Sharp linear design with clear panel — strong, architectural, and unmistakably premium." },
+
+     { id:12, name:"Gate Light 12", code:"GL-012", category:"gate",
+    image:"https://i.ibb.co/SwC968cn/Whats-App-Image-2026-04-26-at-11-04-59-PM.jpg",
+    desc:"Sharp linear design with clear panel — strong, architectural, and unmistakably premium." },
+
+     { id:13, name:"Gate Light 13", code:"GL-013", category:"gate",
+    image:"https://i.ibb.co/My69M3yt/Whats-App-Image-2026-04-28-at-4-58-18-PM.jpg",
+    desc:"Sharp linear design with clear panel — strong, architectural, and unmistakably premium." },
+
+
+
+
+
+
 
   /* ── Wall Lights ─────────────────────────────────────────── */
   { id:20, name:"Wall Light 1",  code:"WL-001", category:"wall",
