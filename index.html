@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MARIO PRODUCTS | Fancy Light Manufacturers</title>
+  <meta name="description" content="Premium decorative lighting manufacturing company based in Calicut. Crafting the Shape of Light since 2004.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/hero.css">
+</head>
+<body>
+
+<!-- ══ Sticky Navbar ══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">MARIO<span class="gold-text">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#features">Why Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="light-switch-container">
+        <span class="switch-label">LUMENS</span>
+        <label class="switch">
+          <input type="checkbox" id="theme-toggle" checked>
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══ Hero ═══════════════════════════════════════════════ -->
+  <header id="home" class="hero">
+    <!-- Atmospheric layers -->
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-chandelier-beam"></div>
+    <div class="hero-cone"></div>
+    <div class="hero-floor-glow"></div>
+    <div class="hero-side-left"></div>
+    <div class="hero-side-right"></div>
+    <div class="hero-arc"></div>
+    <div class="hero-arc"></div>
+    <div class="hero-arc"></div>
+    <div class="hero-hline hero-hline-top"></div>
+    <div class="hero-hline hero-hline-bottom"></div>
+
+    <div class="hero-content fade-in-up">
+      <span class="eyebrow">✦ Fancy Light Manufacturers ✦</span>
+      <h1 class="hero-title">
+        Crafting the
+        <span class="hero-highlight script-font">Shape of Light</span>
+      </h1>
+      <div class="hero-ornament"><div class="hero-ornament-diamond"></div></div>
+      <p class="hero-subtitle">Premium, handcrafted lighting solutions illuminating Kerala since 2004.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn btn-primary glow-effect">Explore Products</a>
+        <a href="#contact"  class="btn btn-secondary">Contact Us</a>
+      </div>
+      <div class="trust-badges">
+        <div class="badge"><div class="badge-dot"></div> 22+ Years Experience</div>
+        <div class="badge"><div class="badge-dot"></div> 50+ Products</div>
+        <div class="badge"><div class="badge-dot"></div> Handcrafted Quality</div>
+      </div>
+      <div class="highlight-strip">Lightweight &nbsp;•&nbsp; Durable &nbsp;•&nbsp; Customizable</div>
+    </div>
+    <div class="hero-image-wrapper">
+      <div class="particles"></div>
+    </div>
+  </header>
+
+  <!-- ══ About ══════════════════════════════════════════════ -->
+  <section id="about" class="about section-padding reveal">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2 class="script-font">Our Story</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-content">
+          <h3>Illuminating Spaces Since 2004</h3>
+          <p>Founded by Joseph Alex P J in Calicut, Kerala, Mario Products began with a vision to redefine decorative lighting. With a relentless focus on quality and elegance, we have grown into a trusted luxury brand.</p>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="gold-text fw-bold">2004</span>
+              <p>Founded in Calicut</p>
+            </div>
+            <div class="timeline-item">
+              <span class="gold-text fw-bold">4000+</span>
+              <p>Units/Year Production</p>
+            </div>
+            <div class="timeline-item">
+              <span class="gold-text fw-bold">50+</span>
+              <p>Dealers Network in Malabar</p>
+            </div>
+          </div>
+        </div>
+        <div class="vision-mission glass-card">
+          <div class="card-inner">
+            <h4 class="gold-text">Our Vision</h4>
+            <p>To be the premier brand of choice for modern, durable, and luxurious luminous aesthetics, transforming every home into a masterpiece of light.</p>
+            <hr>
+            <h4 class="gold-text">The Process</h4>
+            <p><strong>60% handcrafted production</strong> using premium <strong>Raw material: Acrylic &amp; Metal</strong>. Our units are <strong>80% manually crafted for precision and quality</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Products ═══════════════════════════════════════════ -->
+  <section id="products" class="products section-padding reveal">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2 class="script-font">Collections</h2>
+        <div class="title-line"></div>
+        <p>Browse our exquisite range of handcrafted lighting</p>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="gate">Gate Lights</button>
+        <button class="filter-btn" data-filter="wall">Wall Lights</button>
+        <button class="filter-btn" data-filter="hanging">Hanging Lights</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- ══ Modal ══════════════════════════════════════════════ -->
+  <div id="productModal" class="modal">
+    <div class="modal-content glass-card">
+      <span class="close-modal">&times;</span>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- ══ Why Choose Us ══════════════════════════════════════ -->
+  <section id="features" class="features section-padding reveal">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2 class="script-font">Why Choose Us</h2>
+        <div class="title-line"></div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card glass-card">
+          <div class="icon gold-text">★</div>
+          <h3>10-Year Durability</h3>
+          <p>Long-lasting and reliable, built to endure harsh weather while maintaining its elegant aesthetic appeal.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="icon gold-text">⚒</div>
+          <h3>Handcrafted Perfection</h3>
+          <p>80% manually crafted. 60% handcrafted production ensuring exclusive feel and attention to detail.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="icon gold-text">✨</div>
+          <h3>Premium Materials</h3>
+          <p>Crafted using the finest raw materials — Acrylic &amp; Metal — for a lightweight design with a high-end luxury finish.</p>
+        </div>
+        <div class="feature-card glass-card">
+          <div class="icon gold-text">🏷️</div>
+          <h3>Affordable Luxury</h3>
+          <p>Unmatched value with high customization availability. Proudly made in Kerala for homes across India.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Footer / Contact ════════════════════════════════════ -->
+  <footer id="contact" class="footer section-padding reveal">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>MARIO<span class="gold-text">.</span></h3>
+          <p class="tagline">Crafting the Shape of Light.</p>
+        </div>
+        <div class="footer-contact">
+          <h4 class="gold-text">Get in Touch</h4>
+          <p>Azil Complex, Door No. 4/1142D5<br>Vellayil, Beach PO, Calicut – 673032</p>
+          <p><strong>Phone:</strong> <a href="tel:+919847262497">+91 9847262497</a></p>
+          <p><strong>Email:</strong> <a href="mailto:mariyaplastic@gmail.com">mariyaplastic@gmail.com</a></p>
+        </div>
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15651.986706436669!2d75.7600!3d11.2650!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDE1JzU0LjAiTiA3NcKwNDUnMzYuMCJF!5e0!3m2!1sen!2sin!4v1615467812900!5m2!1sen!2sin"
+            width="100%" height="200"
+            style="border:0; border-radius:8px;"
+            allowfullscreen="" loading="lazy"
+            title="Mario Products Location">
+          </iframe>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mario Products. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ WhatsApp Float ══════════════════════════════════════ -->
+  <a href="https://wa.me/919847262497?text=Hello,%20I%E2%80%99m%20interested%20in%20your%20lighting%20products"
+     class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts — data first, then app logic -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* ============================================================
+   MARIO PRODUCTS — style.css + components.css (inlined)
+   Luxury Lighting Brand | Dark-Gold Aesthetic
+   ============================================================ */
+
+/* ── CSS Custom Properties ───────────────────────────────── */
+:root {
+  --bg-primary:     #0a0a0f;
+  --bg-secondary:   #10101a;
+  --bg-card:        rgba(255,255,255,0.035);
+  --bg-glass:       rgba(255,255,255,0.06);
+  --border-glass:   rgba(255,255,255,0.08);
+  --text-primary:   #f0ede8;
+  --text-secondary: #9a9590;
+  --text-muted:     #5a5550;
+  --gold:           #c9a84c;
+  --gold-light:     #e8c97a;
+  --gold-dark:      #8a6a20;
+  --gold-glow:      rgba(201,168,76,0.25);
+  --green-wa:       #25D366;
+  --green-wa-dark:  #1da851;
+  --navbar-bg:      rgba(10,10,15,0.88);
+  --shadow-card:    0 8px 40px rgba(0,0,0,0.5);
+  --shadow-gold:    0 0 30px rgba(201,168,76,0.18);
+  --radius:         14px;
+  --radius-sm:      8px;
+  --transition:     0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+[data-theme="light"] {
+  --bg-primary:     #f7f4ef;
+  --bg-secondary:   #eeead9;
+  --bg-card:        rgba(0,0,0,0.03);
+  --bg-glass:       rgba(255,255,255,0.72);
+  --border-glass:   rgba(0,0,0,0.08);
+  --text-primary:   #1a1510;
+  --text-secondary: #4a4540;
+  --text-muted:     #8a8580;
+  --navbar-bg:      rgba(247,244,239,0.92);
+  --shadow-card:    0 8px 40px rgba(0,0,0,0.1);
+}
+
+/* ── Reset & Base ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+  transition: background-color 0.4s, color 0.4s;
+}
+img { display: block; max-width: 100%; }
+a   { color: inherit; text-decoration: none; }
+ul  { list-style: none; }
+
+/* ── Scrollbar ───────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+::selection { background: var(--gold-glow); color: var(--gold-light); }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+
+/* ── Typography helpers ──────────────────────────────────── */
+.script-font { font-family: 'Italianno', cursive; }
+.gold-text   { color: var(--gold); }
+.fw-bold     { font-weight: 700; }
+.text-center { text-align: center; }
+
+/* ── Layout ──────────────────────────────────────────────── */
+.container       { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-padding { padding: 100px 0; }
+
+/* ── Section Title ───────────────────────────────────────── */
+.section-title h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--gold);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.section-title p { color: var(--text-secondary); font-size: 1.05rem; margin-top: 12px; }
+.title-line {
+  width: 60px; height: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+  margin: 12px auto 0;
+}
+
+/* ── Glass Card ──────────────────────────────────────────── */
+.glass-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius);
+}
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.btn-sm { padding: 9px 18px; font-size: 0.75rem; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: #0a0a0f;
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--gold-glow);
+}
+.glow-effect { box-shadow: 0 0 22px var(--gold-glow); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-glass);
+}
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+
+.btn-wa { background: var(--green-wa); color: #fff; }
+.btn-wa:hover {
+  background: var(--green-wa-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+}
+
+/* ── Reveal Animations ───────────────────────────────────── */
+.reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.revealed { opacity: 1; transform: none; }
+.fade-in-up { animation: fadeInUp 1s ease forwards; }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: none; }
+}

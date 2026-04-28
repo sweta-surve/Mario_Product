@@ -1,0 +1,380 @@
+/* ══════════════════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════════════════ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #05060e;
+  background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1920&q=85');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+
+/* ── Hero photo parallax ── */
+.hero { background-attachment: fixed; }
+@media (max-width: 768px) { .hero { background-attachment: scroll; } }
+
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%,   rgba(201,168,76,0.18) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 80% at 20% 60%,  rgba(201,168,76,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 80% 60%,  rgba(201,168,76,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 100% 50% at 50% 100%, rgba(201,168,76,0.10) 0%, transparent 70%);
+  z-index: 1;
+  animation: atmospherePulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes atmospherePulse {
+  from { opacity: 0.7; }
+  to   { opacity: 1; }
+}
+
+/* ── Chandelier ceiling light beam ── */
+.hero-chandelier-beam {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 120px;
+  background: linear-gradient(to bottom, rgba(201,168,76,0.9), rgba(201,168,76,0.1));
+  z-index: 2;
+}
+.hero-chandelier-beam::after {
+  content: '';
+  position: absolute;
+  top: 110px; left: 50%;
+  transform: translateX(-50%);
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--gold-light);
+  box-shadow: 0 0 20px 8px rgba(201,168,76,0.6), 0 0 60px 30px rgba(201,168,76,0.2);
+}
+
+/* ── Main cone of light from top ── */
+.hero-cone {
+  position: absolute;
+  top: 120px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 0;
+  border-left: 340px solid transparent;
+  border-right: 340px solid transparent;
+  border-top: 700px solid rgba(201,168,76,0.045);
+  z-index: 1;
+  filter: blur(18px);
+  animation: coneSway 10s ease-in-out infinite alternate;
+}
+
+@keyframes coneSway {
+  from { transform: translateX(-50%) rotate(-2deg) scaleX(0.95); opacity: 0.7; }
+  to   { transform: translateX(-50%) rotate(2deg)  scaleX(1.05); opacity: 1; }
+}
+
+/* ── Floor reflection glow ── */
+.hero-floor-glow {
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 700px; height: 180px;
+  background: radial-gradient(ellipse 80% 100% at 50% 100%, rgba(201,168,76,0.18) 0%, transparent 70%);
+  z-index: 1;
+  filter: blur(12px);
+}
+
+/* ── Side ambient glows ── */
+.hero-side-left, .hero-side-right {
+  position: absolute;
+  top: 30%; width: 280px; height: 500px;
+  z-index: 1;
+  filter: blur(60px);
+  border-radius: 50%;
+  opacity: 0.35;
+}
+.hero-side-left  { left: -80px;  background: radial-gradient(ellipse, rgba(201,168,76,0.4) 0%, transparent 70%); }
+.hero-side-right { right: -80px; background: radial-gradient(ellipse, rgba(201,168,76,0.4) 0%, transparent 70%); }
+
+/* ── Noise grain overlay ── */
+.hero-grain {
+  position: absolute; inset: 0; z-index: 3;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* ── Decorative arc lines ── */
+.hero-arc {
+  position: absolute;
+  bottom: -30px; left: 50%;
+  transform: translateX(-50%);
+  width: 900px; height: 900px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.07);
+  z-index: 2;
+  pointer-events: none;
+}
+.hero-arc:nth-child(2) { width: 650px; height: 650px; border-color: rgba(201,168,76,0.05); bottom: -80px; }
+.hero-arc:nth-child(3) { width: 420px; height: 420px; border-color: rgba(201,168,76,0.09); bottom: -120px; }
+
+/* ── Horizontal gold lines ── */
+.hero-hline {
+  position: absolute;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.25) 30%, rgba(201,168,76,0.25) 70%, transparent 100%);
+  z-index: 2;
+}
+.hero-hline-top    { top: 88px; }
+.hero-hline-bottom { bottom: 48px; }
+
+.hero-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to bottom,
+      rgba(5,6,14,0.60) 0%,
+      rgba(5,6,14,0.25) 35%,
+      rgba(5,6,14,0.25) 60%,
+      rgba(5,6,14,0.80) 100%
+    ),
+    radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 4;
+  max-width: 660px;
+  padding: 140px 24px 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Eyebrow pill badge ── */
+.eyebrow {
+  display: inline-block !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: rgba(201,168,76,0.10);
+  border: 1px solid rgba(201,168,76,0.25);
+  border-radius: 50px;
+  padding: 6px 18px;
+  margin-bottom: 28px;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.8);
+}
+.hero-highlight {
+  font-size: clamp(3.8rem, 7.5vw, 7rem);
+  color: var(--gold);
+  display: block;
+  line-height: 1;
+  margin-top: 4px;
+  text-shadow: 0 0 80px rgba(201,168,76,0.5), 0 2px 40px rgba(0,0,0,0.6);
+  filter: drop-shadow(0 0 30px rgba(201,168,76,0.35));
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  max-width: 420px;
+  margin-left: auto; margin-right: auto;
+  line-height: 1.8;
+}
+
+/* ── Gold divider ornament ── */
+.hero-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 34px;
+}
+.hero-ornament::before,
+.hero-ornament::after {
+  content: '';
+  flex: 1;
+  max-width: 80px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.5));
+}
+.hero-ornament::after {
+  background: linear-gradient(90deg, rgba(201,168,76,0.5), transparent);
+}
+.hero-ornament-diamond {
+  width: 6px; height: 6px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  box-shadow: 0 0 12px rgba(201,168,76,0.8);
+}
+
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-bottom: 44px; }
+
+.trust-badges {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 28px;
+  background: rgba(201,168,76,0.05);
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 50px;
+  padding: 12px 28px;
+  backdrop-filter: blur(10px);
+  display: inline-flex;
+}
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.badge-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+.highlight-strip {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(201,168,76,0.12);
+  padding-top: 20px;
+  margin-top: 8px;
+}
+
+/* Hero Visual */
+.hero-image-wrapper { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.light-beam {
+  position: absolute;
+  right: 8%; top: 50%;
+  transform: translateY(-50%);
+  width: 400px; height: 650px;
+  background: conic-gradient(from -10deg at 50% 0%, transparent 40%, rgba(201,168,76,0.13) 50%, transparent 60%);
+  border-radius: 50%;
+  filter: blur(32px);
+  animation: beamSway 8s ease-in-out infinite alternate;
+}
+@keyframes beamSway {
+  from { transform: translateY(-50%) rotate(-6deg); opacity: 0.6; }
+  to   { transform: translateY(-50%) rotate(6deg);  opacity: 1; }
+}
+.particles { position: absolute; inset: 0; }
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0%   { transform: translateY(0)     scale(1); opacity: 0; }
+  20%  { opacity: 0.6; }
+  80%  { opacity: 0.3; }
+  100% { transform: translateY(-130px) scale(0); opacity: 0; }
+}
+.eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 18px;
+}
+.hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 400;
+  line-height: 1.08;
+  color: var(--text-primary);
+  margin-bottom: 22px;
+}
+.hero-highlight {
+  font-size: clamp(3.5rem, 7vw, 6.5rem);
+  color: var(--gold);
+  display: block;
+}
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 36px;
+  max-width: 440px;
+}
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+
+.trust-badges { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; }
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+.badge-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+.highlight-strip {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-glass);
+  padding-top: 16px;
+}
+
+/* Hero Visual */
+.hero-image-wrapper { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.light-beam {
+  position: absolute;
+  right: 8%; top: 50%;
+  transform: translateY(-50%);
+  width: 400px; height: 650px;
+  background: conic-gradient(from -10deg at 50% 0%, transparent 40%, rgba(201,168,76,0.13) 50%, transparent 60%);
+  border-radius: 50%;
+  filter: blur(32px);
+  animation: beamSway 8s ease-in-out infinite alternate;
+}
+@keyframes beamSway {
+  from { transform: translateY(-50%) rotate(-6deg); opacity: 0.6; }
+  to   { transform: translateY(-50%) rotate(6deg);  opacity: 1; }
+}
+.particles { position: absolute; inset: 0; }
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0;
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp {
+  0%   { transform: translateY(0)     scale(1); opacity: 0; }
+  20%  { opacity: 0.6; }
+  80%  { opacity: 0.3; }
+  100% { transform: translateY(-130px) scale(0); opacity: 0; }
+}
