@@ -67,15 +67,16 @@ const products = [
 
   /* ── Wall Lights ─────────────────────────────────────────── */
   { id:20, name:"Wall Light 1",  code:"WL-001", category:"wall",
-    image:"https://i.ibb.co/DgPKwghp/Whats-App-Image-2026-04-26-at-11-04-57-PM.jpg",
+    image:" 1",  code:"WL-001", category:"wall",
+    image:"https://i.ibb.co/Gv4YwRM6/Whats-App-Image-2026-04-26-at-11-04-56-PM.jpg",
     desc:"Pristine wall light with clear diffuser. Brightens interiors while adding decorative texture." },
 
   { id:21, name:"Wall Light 2",  code:"WL-002", category:"wall",
-    image:"https://i.ibb.co/sSDf7SG/Whats-App-Image-2026-04-26-at-11-04-56-PM-1.jpg",
+    image:"https://i.ibb.co/DgPKwghp/Whats-App-Image-2026-04-26-at-11-04-57-PM.jpg",
     desc:"Elegant wall light with milky diffuser — soft ambient glow for living rooms and corridors." },
 
   { id:22, name:"Wall Light 3",  code:"WL-003", category:"wall",
-    image:"https://i.ibb.co/Gv4YwRM6/Whats-App-Image-2026-04-26-at-11-04-56-PM.jpg",
+    image:"https://i.ibb.co/sSDf7SG/Whats-App-Image-2026-04-26-at-11-04-56-PM-1.jpg",
     desc:"Minimalist wall light with clear panel. Clean lines that complement any decor." },
 
   { id:23, name:"Wall Light 4",  code:"WL-004", category:"wall",
