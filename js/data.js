@@ -32,19 +32,19 @@ const products = [
     desc:"Sophisticated frame with milky diffuser for a soft, inviting entrance glow." },
 
   { id:7,  name:"Gate Light 7",  code:"GL-007", category:"gate",
-    image:"https://i.ibb.co/Kj5ttj3V/Whats-App-Image-2026-04-26-at-11-05-03-PM-1.jpg",
+    image:"https://i.ibb.co/gZ3Bk7bY/Whats-App-Image-2026-04-28-at-5-43-39-PM.jpg",
     desc:"Bold lattice with milky panel. Makes a confident, luxury statement at night." },
 
   { id:8,  name:"Gate Light 8",  code:"GL-008", category:"gate",
-    image:"https://i.ibb.co/mCJFyKrx/Whats-App-Image-2026-04-26-at-11-05-03-PM.jpg",
+    image:"https://i.ibb.co/hx1Bvvg7/Whats-App-Image-2026-04-28-at-4-58-17-PM.jpg",
     desc:"Striking design with clear diffuser — dramatic shadow patterns that transform any gate." },
 
   { id:9,  name:"Gate Light 9",  code:"GL-009", category:"gate",
-    image:"https://i.ibb.co/QFkvGCPq/Whats-App-Image-2026-04-26-at-11-04-59-PM-1.jpg",
+    image:"https://i.ibb.co/rKyXdq3G/Whats-App-Image-2026-04-28-at-4-58-16-PM.jpg",
     desc:"Contemporary profile with milky diffuser. Effortlessly blends into modern facades." },
 
   { id:10, name:"Gate Light 10", code:"GL-010", category:"gate",
-    image:"https://i.ibb.co/SwC968cn/Whats-App-Image-2026-04-26-at-11-04-59-PM.jpg",
+    image:"https://i.ibb.co/Kj5ttj3V/Whats-App-Image-2026-04-26-at-11-05-03-PM-1.jpg",
     desc:"Sharp linear design with clear panel — strong, architectural, and unmistakably premium." },
 
   /* ── Wall Lights ─────────────────────────────────────────── */
