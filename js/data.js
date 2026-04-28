@@ -12,11 +12,11 @@ const products = [
     desc:"Elegant handcrafted gate light. Casts a warm, soft glow perfect for any entrance." },
 
   { id:2,  name:"Gate Light 2",  code:"GL-002", category:"gate",
-    image:"https://i.ibb.co/R8Bg0GY/Whats-App-Image-2026-04-26-at-11-05-10-PM-1.jpg",
+    image:"https://i.ibb.co/Vc9XWpHb/Whats-App-Image-2026-04-28-at-4-58-18-PM-2.jpg",
     desc:"Refined gate light with crystal-clear panel. Creates striking light patterns on surrounding surfaces." },
 
   { id:3,  name:"Gate Light 3",  code:"GL-003", category:"gate",
-    image:"https://i.ibb.co/5XHpmf8W/Whats-App-Image-2026-04-26-at-11-05-10-PM.jpg",
+    image:"https://i.ibb.co/Vd1wk3n/Whats-App-Image-2026-04-28-at-4-58-19-PM.jpg",
     desc:"Clean linear silhouette with milky diffuser. A modern statement for any gate or entrance." },
 
   { id:4,  name:"Gate Light 4",  code:"GL-004", category:"gate",
